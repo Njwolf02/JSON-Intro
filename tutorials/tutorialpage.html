@@ -87,10 +87,14 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/Shark-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
+        
+		<div class="container">
+            
+			<div class="row">
+                
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+					<div class="post-heading">
                         <h1>Top 8 Angular Tutorials</h1>
                         <h2 class="subheading">That I did not write.</h2>
                         <span class="meta">Posted by <a href="#">Nicolas Wolf</a> on February 11, 2015</span>
@@ -101,26 +105,23 @@
     </header>
     
 	<article>
-        <div class="container">
+	
+	<div ng-controller="ExampleController as list">
+	   <div class="container">
+
             <div class="row">
+			
+			<div class="orderBy text-center">
+				<h1>Order By:</h1>
+				<h3><a href="" ng-click="reverse=false;order('title', false)">Title</a></h3>
+				<h3><a href="" ng-click="reverse=!reverse;order('phone', reverse)">Author</a></h3> 
+			</div>
+			
 			<h2 class="section-heading">Top 8 Angular Tutorials</h2>
+				
 				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-repeat="list in list.tutorials">
-					
-					<table data-url="tutorials/tutorials.json" data-height="299" data-show-columns="true" data-id-field="id">
-						<thead>
-						<tr>
-							<th data-field="state" data-radio="true"></th>
-							<th data-field="name" data-switchable="false">{{list.title}}</th>
-							<th data-field="price">{{list.author}}</th>
-							<th data-field="column1">Columns1</th>
-							<th data-field="column2" data-visible="false">Columns2</th>
-							<th data-field="column3" data-switchable="false">Columns3</th>
-							<th data-field="column4" data-visible="false">Columns4</th>
-						</tr>
-						</thead>
-					</table>
-					
-					<div class="thumbnail">
+				
+				<div class="thumbnail">
 
 					
 					<img src="{{list.image}}" alt="image">
@@ -134,10 +135,11 @@
 							<p>Link to tutorial here: <a href="{{list.url}} " class="btn btn-primary" role="button">Tutorial</a>
 						
 						</div>
-					</div>
 				</div>
+				</div>
+			</div>
 		</div>
-    </div>
+	</article>
 	
 	<hr>
 
