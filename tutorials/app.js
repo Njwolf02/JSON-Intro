@@ -25,7 +25,7 @@
 		
 		
 		$http.get('tutorials.json').success(function(data) {
-			$scope.items = data;
+			orderBy.items = data;
 		});
 		
 		$scope.order = function(predicate, reverse) {
