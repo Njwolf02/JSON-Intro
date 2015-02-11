@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="turtorial">
+<html ng-app="turtorialpage">
   <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="styles.css"/>
@@ -7,31 +7,31 @@
 
     
     
-    <script type="text/javascript" src="products.js"></script>
+    <script type="text/javascript" src="tutorials.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
 
-  <body ng-controller="StoreController as store">
+  <body ng-controller="ListController as list">
   
 
-    <!--  Products Container  -->
+    <!--  tutorials Container  -->
     
-      <!--  Product Container  -->
+      <!--  list Container  -->
   
-	<div class="continer">
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-md-4" ng-repeat="product in store.products">
+			<div class="col-sm-6 col-md-4" ng-repeat="list in list.tutorials">
 				<div class="thumbnail">
 				
-				<img src="{{product.image}}" alt="image">
+				<img src="{{list.image}}" alt="image">
 					
 					<div class="caption" class="col-sm-6 col-md-4">
 						
-						<h3>{{product.title}}</h3>
+						<h3>{{list.title}}</h3>
 						
-						<p>{{product.author}}</p>
+						<p>{{list.author}}</p>
 						
-						<p>Link to tutorial here: <a href="{{product.url}} " class="btn btn-primary" role="button">Tutorial</a>
+						<p>Link to tutorial here: <a href="{{list.url}} " class="btn btn-primary" role="button">Tutorial</a>
 					
 					</div>
 				</div>

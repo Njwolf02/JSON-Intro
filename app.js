@@ -1,19 +1,19 @@
 (function() {
-  var app = angular.module('turtorial', ['store-directives']);
+  var app = angular.module('turtorialpage', ['list-directives']);
 
-  app.controller('StoreController', ['$http', function($http){
-  var store = this;
-  store.products = [];
+  app.controller('ListController', ['$http', function($http){
+  var list = this;
+  list.tutorials = [];
 
   $http.get('tutorials.json').success(function(data){
-    store.products = data;
+    list.tutorials = data;
   });
 }]);
   app.controller('ReviewController', function() {
     this.review = {};
 
-    this.addReview = function(product) {
-      product.reviews.push(this.review);
+    this.addReview = function(list) {
+      list.reviews.push(this.review);
 
       this.review = {};
     };

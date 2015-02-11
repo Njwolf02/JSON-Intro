@@ -1,31 +1,31 @@
 (function(){
-    var app = angular.module('store-directives', []);
+    var app = angular.module('list-directives', []);
 
-    app.directive("productDescription", function() {
+    app.directive("listDescription", function() {
       return {
         restrict: 'E',
-        templateUrl: "product-description.html"
+        templateUrl: "list-description.html"
       };
     });
 
-    app.directive("productReviews", function() {
+    app.directive("listReviews", function() {
       return {
         restrict: 'E',
-        templateUrl: "product-reviews.html"
+        templateUrl: "list-reviews.html"
       };
     });
 
-    app.directive("productSpecs", function() {
+    app.directive("listSpecs", function() {
       return {
         restrict:"A",
-        templateUrl: "product-specs.html"
+        templateUrl: "list-specs.html"
       };
     });
 
-    app.directive("productTabs", function() {
+    app.directive("listTabs", function() {
       return {
         restrict: "E",
-        templateUrl: "product-tabs.html",
+        templateUrl: "list-tabs.html",
         controller: function() {
           this.tab = 1;
 
@@ -41,10 +41,10 @@
       };
     });
 
-    app.directive("productGallery", function() {
+    app.directive("listGallery", function() {
       return {
         restrict: "E",
-        templateUrl: "product-gallery.html",
+        templateUrl: "list-gallery.html",
         controller: function() {
           this.current = 0;
           this.setCurrent = function(imageNumber){
