@@ -16,15 +16,27 @@
     <!--  Products Container  -->
     
       <!--  Product Container  -->
+  
+		
+	<div class="row">
+		<div class="col-sm-6 col-md-4" ng-repeat="product in store.products">
+			<div class="thumbnail">
+			
+			<img src="{{product.image}}" alt="image" height="auto" width="auto">
+				
+				<div class="caption">
+					
+					<h3>{{product.title}}</h3>
+					
+					<p>{{product.author}}</p>
+					
+					<p><a href="{{product.url}} " class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+				
+				</div>
+			</div>
+		</div>
+	</div>
       
-	  
-	  <div class="col-md-3 col-md-7" ng-repeat="product in store.products">
-	  
-		<h3>{{product.title}}</h3>  <img src="{{product.image}}" height="auto" width="auto"> 
-		{{product.url}} {{product.author}}
-      
-	  </div>
-
     
   </body>
 </html>
