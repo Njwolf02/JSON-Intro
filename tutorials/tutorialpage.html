@@ -104,12 +104,10 @@
         </div>
     </header>
     
-	<article>
-	
-	<div ng-controller="ExampleController as example">
-	   <div class="container">
-
-            </div><div class="row">
+<!-- Article -->
+    <article>
+        <div class="container">
+            <div class="row">
                 <p>
                     Filter By: <br />
                     <input type="text" ng-model="searchText">
@@ -123,29 +121,20 @@
                         </select>
                     </p>
                 </div>
-				
-				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-repeat="list in list.tutorials">
-				
-				<div class="thumbnail">
-
-					
-					<img src="{{list.image}}" alt="image">
-						
-						<div class="caption" class="col-sm-6 col-md-4">
-							
-							<h3>{{list.title}}</h3>
-							
-							<p>By: {{list.author}}</p>
-							
-							<p>Link to tutorial here: <a href="{{list.url}} " class="btn btn-primary" role="button">Tutorial</a>
-						
-						</div>
-				</div>
-				</div>
-			</div>
-		</div>
-	</article>
-	
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-repeat="list in list.tutorials | orderBy:sortExpression | filter:searchText">
+                    <div class="thumbnail">
+                        <img src="{{list.image}}" alt="image">
+                        <div class="caption" class="col-sm-6 col-md-4">
+                            <h3>{{list.title}}</h3>
+                            <p>By: {{list.author}}</p>
+                            <p><a href="{{list.url}} " class="btn btn-primary" role="button">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    
 	<hr>
 
     <!-- Footer -->
