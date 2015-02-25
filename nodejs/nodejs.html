@@ -110,20 +110,19 @@
 
                     <p>You needn't know 2 different scripting languages to develop a full fledged web application. Even if you know both, it is difficult to shift your concentration back and forth between front-end and back-end languages.</p>
 
+                    <h2 class="section-heading">What is the concept of non blocking IO?</h2>
+					<p>Real-time web features require a long-lived mostly-idle connection per user. In a traditional synchronous web server, this implies devoting one thread to each user, which can be very expensive. To minimize the cost of concurrent connections, it uses a single-threaded event loop. This means that all application code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
+
 					<br>
 					<a href="#">
                         <img class="img-responsive" src="img/NodeJS-Evented.jpg" alt="non-blocking image">
                     </a>
-                    <span class="caption text-muted">diagram depicts how Node.js server works. At a high level, Node.js server has two parts to it:
-                            <ul class = "dropdown-menu">
+                    <span class="caption text-muted">Diagram depicts how Node.js server works. At a high level, Node.js server has two parts to it:
+                            <ul>
                                 <li>At the front, you have Chrome V8 engine (single threaded), event loop and other C/C++ libraries that run your JS code and listen to HTTP/TCP requests.</li>
                                 <li>And at the back of the server, you have libuv (includes libio) and other C/C++ libraries that provide asynchronous I/O.</li>
                             </ul>	
 					</span>
-
-                    <h2 class="section-heading">What is the concept of non blocking IO?</h2>
-					<p>Real-time web features require a long-lived mostly-idle connection per user. In a traditional synchronous web server, this implies devoting one thread to each user, which can be very expensive. To minimize the cost of concurrent connections, it uses a single-threaded event loop. This means that all application code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
-
                 </div>
             </div>
         </div>
