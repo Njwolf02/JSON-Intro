@@ -98,28 +98,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <h2 class="section-heading">What is Angular</h2>
+                    <h2 class="section-heading">What is Node.js</h2>
 
-                    <p>AngularJS is a JavaScript MVC framework developed by Google that lets you build well structured, easily testable, and maintainable front-end applications.</p>
+                    <p>Node.js is an open source, cross-platform runtime environment for server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, and IBM.</p>
 
                     <p>AngularJS is a MVC framework that defines numerous concepts to properly organize your web application. Your application is defined with modules that can depend from one to the others. It enhances HTML by attaching directives to your pages with new attributes or tags and expressions in order to define very powerful templates directly in your HTML. </p>
 
-                    <h2 class="section-heading">Expressions</h2>
+                    <h2 class="section-heading">What makes node different than developing with more traditional server side languages?</h2>
 					
-                    <blockquote>AngularJS let you build properly structured web applications very easily. For that, AngularJS contains several concepts to separate the different parts of your application.</blockquote>
+                    <blockquote>JavaScript has been traditionally used for processing information on the client-side (Browser) With node.js, even server side processing can be done with JavaScript.</blockquote>
 
-                    <p>In order to create the views of your application, AngularJS let you execute expressions directly within your HTML pages. In those expressions, you have access to Javascript code which give you the ability to realize some computation in order to display what you want. In the screenshots below, you can see a very basic expression and it result.</p>
+                    <p>You needn't know 2 different scripting languages to develop a full fledged web application. Even if you know both, it is difficult to shift your concentration back and forth between front-end and back-end languages.</p>
 
-                    <a href="#">
-                        <img class="img-responsive" src="\JSON-Intro/img/code-Expression.JPG" alt="code image">
-                    </a>
 					<br>
 					<a href="#">
-                        <img class="img-responsive" src="\JSON-Intro/img/result-Expression.JPG" alt="code image">
+                        <img class="img-responsive" src="img/NodeJS-Evented.jpg" alt="non-blocking image">
                     </a>
-                    <span class="caption text-muted">Expressions are used for small operations, In order to structure you web application, AngularJS will give you a much impressive tool, directives.</span>
+                    <span class="caption text-muted">diagram depicts how Node.js server works. At a high level, Node.js server has two parts to it:
+                            <ul class = "dropdown-menu">
+                                <li>At the front, you have Chrome V8 engine (single threaded), event loop and other C/C++ libraries that run your JS code and listen to HTTP/TCP requests.</li>
+                                <li>And at the back of the server, you have libuv (includes libio) and other C/C++ libraries that provide asynchronous I/O.</li>
+                            </ul>	
+					</span>
 
-                    <p>Directives are one of the most powerful feature of AngularJS. They allow you to extend HTML to answer the needs of web applications. Directives let you specify how your page should be structured for the data available in a given scope. We will have a look at the scope and where those data are coming from later.</p>
+                    <h2 class="section-heading">What is the concept of non blocking IO?</h2>
+					<p>Real-time web features require a long-lived mostly-idle connection per user. In a traditional synchronous web server, this implies devoting one thread to each user, which can be very expensive. To minimize the cost of concurrent connections, it uses a single-threaded event loop. This means that all application code should aim to be asynchronous and non-blocking because only one operation can be active at a time.</p>
 
                 </div>
             </div>
